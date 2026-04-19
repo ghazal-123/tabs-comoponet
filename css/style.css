@@ -1,0 +1,43 @@
+body {
+  font-family: Arial;
+}
+
+.tabs {
+  width: 500px;
+  margin: 40px auto;
+}
+
+.tab-buttons {
+  display: flex;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: var(--tab-color, #eee);
+}
+
+.tab.active {
+  border-bottom: 3px solid black;
+  font-weight: bold;
+}
+
+#addTab {
+  margin-left: auto;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.tab-content.active {
+  display: block;
+}
