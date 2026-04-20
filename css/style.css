@@ -3,19 +3,16 @@ body {
   font-family: Arial;
 }
 
-/* الحاوية الرئيسية تاخد كامل الشاشة */
 .tabs {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* شريط التابات */
 .tab-buttons {
   display: flex;
 }
 
-/* التابات */
 .tab {
   padding: 10px 20px;
   border: 1px solid #ccc;
@@ -28,7 +25,6 @@ body {
   font-weight: bold;
 }
 
-/* زر الإضافة */
 #addTab {
   margin-left: auto;
   background: #333;
@@ -38,16 +34,14 @@ body {
   padding: 10px;
 }
 
-/* 👇 أهم جزء */
 .tab-content {
   display: none;
-  flex: 1;              /* ياخد كل المساحة */
+  flex: 1;             
   padding: 20px;
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
-/* التاب النشط */
 .tab-content.active {
   display: block;
 }
