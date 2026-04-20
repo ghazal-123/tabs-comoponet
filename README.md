@@ -18,7 +18,7 @@ the active tab has a different background/border.
 # 🚀 Technologies Used
 
 **HTML5**: For the structural layout of the calculator.  
-**CSS3**: For styling, Flexbox/Grid layouts, and modern UI design.  
+**CSS3**: For styling, Flexbox/Grid layouts.
 **JavaScript**: For the computational logic and DOM manipulation.
 
 # 🛠️ How to Use:
