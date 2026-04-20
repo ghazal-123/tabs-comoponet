@@ -19,7 +19,7 @@ the active tab has a different background/border.
 
 **HTML5**: For the structural layout of the calculator.  
 **CSS3**: For styling, Flexbox/Grid layouts.
-**JavaScript**: For the computational logic and DOM manipulation.
+**JavaScript**:For the computational logic and DOM manipulation.
 
 # 🛠️ How to Use:
 
