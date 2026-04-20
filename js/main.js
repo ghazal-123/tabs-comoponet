@@ -6,8 +6,34 @@ function getRandomColor() {
   return `hsl(${Math.random() * 360}, 70%, 80%)`;
 }
 
-// التنقل بين التابات
+// التنقل + الحذف
 tabsContainer.addEventListener("click", function (e) {
+
+  // 🔴 حذف التاب
+  if (e.target.classList.contains("close")) {
+    const tab = e.target.parentElement;
+
+    const tabs = Array.from(tabsContainer.querySelectorAll(".tab"));
+    const contents = tabsContainer.querySelectorAll(".tab-content");
+
+    const index = tabs.indexOf(tab);
+
+    tab.remove();
+    contents[index].remove();
+
+    // تفعيل أول تاب بعد الحذف
+    const newTabs = tabsContainer.querySelectorAll(".tab");
+    const newContents = tabsContainer.querySelectorAll(".tab-content");
+
+    if (newTabs.length > 0) {
+      newTabs[0].classList.add("active");
+      newContents[0].classList.add("active");
+    }
+
+    return; // مهم
+  }
+
+  // 🟢 التنقل بين التابات
   if (!e.target.classList.contains("tab")) return;
 
   const tabs = tabsContainer.querySelectorAll(".tab");
@@ -35,7 +61,10 @@ addBtn.addEventListener("click", function () {
   // إنشاء tab
   const newTab = document.createElement("button");
   newTab.classList.add("tab");
-  newTab.textContent = "Tab " + newIndex;
+
+ 
+  newTab.innerHTML = `Tab ${newIndex} <span class="close">❌</span>`;
+
   newTab.style.setProperty("--tab-color", color);
 
   // إنشاء content
